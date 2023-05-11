@@ -1,0 +1,28 @@
+# Perfect number: Sayının kendisi dışındaki bölenlerinin toplamı, sayının kendisini veren sayılara mükemmel sayı denir 
+# 6 = 1 + 2 + 3
+# 8 != 1 + 2 + 4
+# 28 = 1 + 2 + 4 + 7 + 14 
+# 12 != 1 + 2 + 3 + 4 + 6
+# 496 = ....
+
+def is_perfect (num):
+ #girilen sayının(num) bölenlerinin toplamını tutmak için "toplam" adında bir değişken oluşturulur
+ toplam= 0
+
+ #range komutu kullanılarak 1 ile başlayan kendisi dışındaki bölenleri belirlenir
+ for i in range(1,num):
+  #i değeri, girilen sayıyı(num) tam bölüyorsa "toplam" değişkenine eklenir  
+  if(num%i == 0):
+    toplam +=i
+#Eğer girilen sayı değeri ile toplam değişkeni eşit olursa"True", değilse "False." yazdırılır.
+ if(num == toplam):
+  return True
+ else:
+   return False
+   
+
+print(is_perfect (6))
+print(is_perfect (8))
+print(is_perfect (28))
+print(is_perfect (12))
+print(is_perfect (496))
