@@ -1,6 +1,7 @@
-Patika.dev Python Temel Eğitimi Projesi
+#Patika.dev Python Temel Eğitimi Projesi
 
-Projeler:
+#Projeler:
+
 1- Bir listeyi düzleştiren (flatten) fonksiyon yazın. Elemanları birden çok katmanlı listtlerden ([[3],2] gibi) oluşabileceği gibi, non-scalar verilerden de oluşabilir. Örnek olarak:
 
 input: [[1,'a',['cat'],2],[[[3]],'dog'],4,5]
