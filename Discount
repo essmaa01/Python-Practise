@@ -20,14 +20,19 @@ items = {
     }
 }
 
-# find the smallest id 
+# find the smallest id
+
 min_id = min(ids)
 
+
 #calculate max money you can get by selling all the stock
+
 max_money = items[min_id]["stock"]*items[min_id]["price"]
 
 #if you make 35% discount, calculate new result
+
 with_discount = max_money*(1-0.35)
 
 # print results in format "Max Money: ... , With Discount: ..."
+
 print("Max Money:" ,max_money,"With Discount:" , with_discount)
