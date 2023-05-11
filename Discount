@@ -1,0 +1,33 @@
+# dictionary items hold item ids as keys and properties as values
+# ids list contains product ids
+# find the smallest id in ids list and calculate max money you can get by selling all the stock
+# if you make 35% discount, calculate new result
+# print results in format "Max Money: ... , With Discount: ..."
+
+ids = [83,98,67]
+items = {
+    83 : {
+        "stock": 100,
+        "price": 89.08
+    },
+    98 : {
+        "stock": 7546,
+        "price": 23.12
+    },
+    67 : {
+        "stock": 0,
+        "price": 4.5
+    }
+}
+
+# find the smallest id 
+min_id = min(ids)
+
+#calculate max money you can get by selling all the stock
+max_money = items[min_id]["stock"]*items[min_id]["price"]
+
+#if you make 35% discount, calculate new result
+with_discount = max_money*(1-0.35)
+
+# print results in format "Max Money: ... , With Discount: ..."
+print("Max Money:" ,max_money,"With Discount:" , with_discount)
