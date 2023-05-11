@@ -13,3 +13,30 @@ output: [1,'a','cat',2,3,'dog',4,5]
 input: [[1, 2], [3, 4], [5, 6, 7]]
 
 output: [[[7, 6, 5], [4, 3], [2, 1]]
+
+def flatten(l):
+    """
+    Girdi olarak verilen listeyi düzleştirir.
+    """
+    flat = []
+    for i in l:
+        if isinstance(i, list) or isinstance(i, tuple):
+            flat.extend(flatten(i))
+        else:
+            flat.append(i)
+    return flat
+a = flatten([[1,'a',['cat'],2],[[[3]],'dog'],4,5])
+print(a)
+
+**************************************************************
+def revrs(l):
+    """
+    Girdi olarak verilen listeyi ve alt liste elemanlarını ters çevirir.
+    """
+    l.reverse()
+    for i in l:
+        if isinstance(i, list) or isinstance(i, tuple):
+            i.reverse()
+    return l
+b = revrs([[1, 2], [3, 4], [5, 6, 7]])
+print(b)
